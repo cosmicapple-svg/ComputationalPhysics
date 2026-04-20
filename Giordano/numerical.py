@@ -90,9 +90,9 @@ def Surface3D(X, Y, V_next, save=False, savename='fig.png'):
     plt.style.use('dark_background')
     ax.plot_surface(X, Y, V_next, cmap ='inferno')
     ax.grid(True, color='dimgray') 
-    ax.w_xaxis.pane.fill = False
-    ax.w_yaxis.pane.fill = False
-    ax.w_zaxis.pane.fill = False
+    ax.xaxis.pane.fill = False
+    ax.yaxis.pane.fill = False
+    ax.zaxis.pane.fill = False
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_zlabel('V(x, y)')
