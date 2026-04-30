@@ -68,8 +68,10 @@ To compute the solution:
 1. Start with an initial guess $V_0(i,j,k)$  
 2. Update all grid points simultaneously using the averaging rule  
 3. Repeat iteratively:
+   
    $$
    V^{(n+1)}(i,j,k) = \text{average of neighbors of } V^{(n)}
+   
    $$
 4. Stop when a convergence criterion is satisfied  
 
