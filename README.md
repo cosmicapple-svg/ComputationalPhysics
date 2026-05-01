@@ -19,6 +19,37 @@ A curated collection of Python implementations for key topics in computational p
 
 ---
 
+## Project Structure
+
+```
+ComputationalPhysics/
+│
+├── Classical_Electrodynamics/
+│   ├── simulation.py
+│   ├── simulation.ipynb
+│   └── README.md
+│
+├── Classical_Mechanics/
+│   ├── simulation.py
+│   ├── simulation.ipynb
+│   └── README.md
+│
+├── Quantum_Mechanics/
+│   ├── simulation.py
+│   ├── simulation.ipynb
+│   └── README.md
+│
+├── Thermodynamics/
+│   ├── simulation.py
+│   ├── simulation.ipynb
+│   └── README.md
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+
+---
+
 ## Project Overview
 
 This repository was originally developed as part of the **Computational Physics** course taught by Dr. José Alonso López Miranda within the [BSc. in Physics Engineering](https://ingenieria.uaq.mx/index.php/oferta-educativa/licenciaturas/ingenieria-fisica/) at the Autonomous University of Querétaro ([UAQ](https://www.uaq.mx/)).
@@ -35,9 +66,7 @@ Its main goal is to provide clean, reusable, and well-documented implementations
 
 In this approach, the spatial domain is discretized into a 3D grid where each point is labeled by integer indices $(i, j, k)$. The objective is to compute the potential:
 
-$$
-V(i,j,k) = V(i\Delta x, j\Delta y, k\Delta z)
-$$
+$$V(i,j,k) = V(i\Delta x, j\Delta y, k\Delta z)$$
 
 Using finite differences, the second derivative in the $x$-direction can be approximated as:
 
@@ -68,9 +97,9 @@ To compute the solution:
 1. Start with an initial guess $V_0(i,j,k)$  
 2. Update all grid points simultaneously using the averaging rule  
 3. Repeat iteratively:
-   $$
-   V^{(n+1)}(i,j,k) = \text{average of neighbors of } V^{(n)}
-   $$
+   
+   $$V^{(n+1)}(i,j,k) = \text{average of neighbors of } V^{(n)}$$
+
 4. Stop when a convergence criterion is satisfied  
 
 This iterative relaxation process is known as the **Jacobi method**, and it is widely used for solving elliptic partial differential equations.
@@ -152,6 +181,7 @@ Required external libraries:
 * `numpy`
 * `matplotlib`
 * `seaborn`
+* `scipy`
 
 ### Setup
 
